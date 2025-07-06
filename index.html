@@ -1,18 +1,41 @@
-<!DOCTYPE html>
-<html lang="ro">
+<!DOCTYPE html><html lang="ro">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DominAgar WebApp - Voidlord Edition</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="logo.png" />
-  
-  <!-- 🔥 Aici adaugi manifestul -->
   <link rel="manifest" href="manifest.json" />
 </head>
 <body>
-  <h1>DominAgar WebApp - Voidlord Edition</h1>
-  <canvas id="agarCanvas"></canvas>
-  <script src="main.js"></script>
-</body>
+  <h1>DominAgar WebApp - Voidlord Edition</h1><canvas id="agarCanvas"></canvas>
+
+  <!-- Butoane pentru control -->  <div id="controls">
+    <button onclick="feed()">Feed</button>
+    <button onclick="split()">Split</button>
+    <button onclick="macroSplit()">Macro Split</button>
+  </div>  <script>
+    // Numele tău: Takizo
+    const playerName = "Takizo";
+    // Numele boților: misu
+    const botName = "misu";
+
+    function feed() {
+      console.log("Feed de la " + playerName);
+    }
+
+    function split() {
+      console.log("Split de la " + playerName);
+    }
+
+    function macroSplit() {
+      console.log("Macro Split de la " + playerName);
+    }
+
+    // Afișare nume la început
+    window.onload = () => {
+      console.log("Player: " + playerName);
+      console.log("Bots: " + botName);
+    };
+  </script>  <script src="main.js"></script></body>
 </html>
