@@ -1,0 +1,9 @@
+{
+  "name": "DominAgar",
+  "short_name": "DominAgar",
+  "start_url": ".",
+  "display": "standalone",
+  "icons": [
+    { "src": "logo.png", "sizes": "192x192", "type": "image/png" }
+  ]
+}
