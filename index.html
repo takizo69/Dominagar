@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="ro">
+<!DOCTYPE html>
+<html lang="ro">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -6,36 +7,61 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="logo.png" />
   <link rel="manifest" href="manifest.json" />
+  <style>
+    body {
+      background-color: #070518;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 60px;
+      font-size: 26px;
+    }
+    .btn-container {
+      margin-top: 100px;
+    }
+    .btn {
+      background-color: #1f1f3c;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #383874;
+    }
+  </style>
 </head>
 <body>
-  <h1>DominAgar WebApp - Voidlord Edition</h1><canvas id="agarCanvas"></canvas>
+  <h1>DominAgar WebApp - Voidlord Edition</h1>
+  
+  <div class="btn-container">
+    <button class="btn" onclick="feed()">Feed</button>
+    <button class="btn" onclick="split()">Split</button>
+    <button class="btn" onclick="macroSplit()">Macro Split</button>
+  </div>
 
-  <!-- Butoane pentru control -->  <div id="controls">
-    <button onclick="feed()">Feed</button>
-    <button onclick="split()">Split</button>
-    <button onclick="macroSplit()">Macro Split</button>
-  </div>  <script>
-    // Numele tău: Takizo
+  <script>
     const playerName = "Takizo";
-    // Numele boților: misu
     const botName = "misu";
 
     function feed() {
-      console.log("Feed de la " + playerName);
+      console.log(`${playerName} dă feed. Boții (${botName}) răspund.`);
     }
 
     function split() {
-      console.log("Split de la " + playerName);
+      console.log(`${playerName} face un split.`);
     }
 
     function macroSplit() {
-      console.log("Macro Split de la " + playerName);
+      console.log(`${playerName} activează macro split. Boții (${botName}) intră în acțiune.`);
     }
-
-    // Afișare nume la început
-    window.onload = () => {
-      console.log("Player: " + playerName);
-      console.log("Bots: " + botName);
-    };
-  </script>  <script src="main.js"></script></body>
+  </script>
+</body>
 </html>
