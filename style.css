@@ -1,12 +1,16 @@
-body {
-  margin: 0;
-  background: #000010;
-  color: #fff;
-  font-family: sans-serif;
-  text-align: center;
+#controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
 }
-#agarCanvas {
-  display: block;
-  width: 100vw;
-  height: 100vh;
+button {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 14px;
 }
