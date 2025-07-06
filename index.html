@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="ro">
+<!DOCTYPE html>
+<html lang="ro">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -6,18 +7,47 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="logo.png" />
   <link rel="manifest" href="manifest.json" />
+  <style>
+    #controls {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    button {
+      background: #0d0d1f;
+      color: white;
+      border: 2px solid #5555ff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1a1a4a;
+    }
+  </style>
 </head>
 <body>
-  <h1>DominAgar WebApp - Voidlord Edition</h1><canvas id="agarCanvas"></canvas>
+  <h1>DominAgar WebApp - Voidlord Edition</h1>
+  <canvas id="agarCanvas"></canvas>
 
-  <!-- Butoane pentru control -->  <div id="controls">
+  <!-- Butoane pentru control -->
+  <div id="controls">
     <button onclick="feed()">Feed</button>
     <button onclick="split()">Split</button>
     <button onclick="macroSplit()">Macro Split</button>
-  </div>  <script>
-    // Numele tău: Takizo
+    <button onclick="split(2)">Double Split</button>
+    <button onclick="split(4, 100)">Tricksplit</button>
+  </div>
+
+  <script>
     const playerName = "Takizo";
-    // Numele boților: misu
     const botName = "misu";
 
     function feed() {
@@ -32,14 +62,6 @@
       console.log("Macro Split de la " + playerName);
     }
 
-    // Afișare nume la început
-    window.onload = () => {
-      console.log("Player: " + playerName);
-      console.log("Bots: " + botName);
-    };
-  </script>  <script src="main.js"></script></body>
-</html>
-<div id="controls">
-  <button onclick="split(2)">Double Split</button>
-  <button onclick="split(4, 100)">Tricksplit</button>
-</div>
+    function split(times = 1, delay = 100) {
+      let count = 0;
+      let interval =
